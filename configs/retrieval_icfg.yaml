@@ -1,0 +1,42 @@
+image_root: '/home/aorus/He/data/ICFG-PEDES/imgs'
+source_image_root: '/home/aorus/He/data/CUHK-PEDES/imgs'
+
+ann_root: 'annotation'
+dataset: 'retrieval_icfg'
+test_dataset: 'icfg_trainset_eval'
+pre_dataset: 'pre_retrieval_icfg'
+
+# set pretrained as a file path or an url
+pretrained: 'checkpoint/model_base.pth'
+
+# size of vit model; base or large
+
+vit: 'base'
+batch_size_train: 12
+batch_size_test: 32
+vit_grad_ckpt: True
+vit_ckpt_layer: 4
+init_lr: 5e-6
+
+# vit: 'large'
+# batch_size_train: 16
+# batch_size_test: 32
+# vit_grad_ckpt: True
+# vit_ckpt_layer: 12
+# init_lr: 5e-6
+
+image_size: 224
+queue_size: 3600
+alpha: 0.4
+k_test: 32
+k_tests: 26
+k: 20
+negative_all_rank: True
+
+# optimizer
+weight_decay: 0.05
+min_lr: 0
+max_epoch: 20
+
+pre_model: 'rstp_checkpoint_best.pth'
+

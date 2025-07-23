@@ -1,0 +1,6 @@
+timm
+transformers
+fairscale
+pycocoevalcap
+nltk
+yaml
